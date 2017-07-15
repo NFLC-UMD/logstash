@@ -8,6 +8,8 @@ output {
 		hosts => [ '{{ logstash.outputs.elasticsearch.host }}:{{ logstash.outputs.elasticsearch.port }}' ]
 		user => '{{ logstash.outputs.elasticsearch.user }}'
 		password => '{{ logstash.outputs.elasticsearch.password }}'
-		index => 'logstash-%{+YYYY.MM.dd}'
+		index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+		document_type => "%{[@metadata][type]}"
+		doc_as_upsert => true		
 	}
 }
