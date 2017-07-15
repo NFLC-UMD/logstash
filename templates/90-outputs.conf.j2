@@ -6,6 +6,8 @@ output {
 	elasticsearch {
 		flush_size => '100'
 		hosts => [ '{{ logstash.outputs.elasticsearch.host }}:{{ logstash.outputs.elasticsearch.port }}' ]
+		user => '{{ logstash.outputs.elasticsearch.user }}'
+		password => '{{ logstash.outputs.elasticsearch.password }}'
 		index => 'logstash-%{+YYYY.MM.dd}'
 	}
 }
