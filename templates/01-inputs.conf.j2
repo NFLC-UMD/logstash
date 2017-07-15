@@ -3,8 +3,8 @@
 #
 
 input {
-	tcp {
-		port => {{ logstash.inputs.json.port }}
-		codec => json
-	}
+  beats {
+    port => 5044
+  }
 }
+
