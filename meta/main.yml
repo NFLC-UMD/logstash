@@ -8,17 +8,16 @@ dependencies:
     tags:
       - build
 
-  - role: sansible.users_and_groups
-    version: v1.0
-    users_and_groups:
-      sudoers: []
-      groups:
-        - name: "{{ logstash.group }}"
-      users:
-        - name: "{{ logstash.user }}"
-          group: "{{ logstash.group }}"
-    tags:
-      - build
+#  - role: sansible.users_and_groups
+#    version: v1.0
+#    users_and_groups:
+#      groups:
+#        - name: "{{ logstash.group }}"
+#      users:
+#        - name: "{{ logstash.user }}"
+#          group: "{{ logstash.group }}"
+#    tags:
+#      - build
 
 galaxy_info:
   author: "David Reed"
