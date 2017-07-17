@@ -1,14 +1,14 @@
 ---
 
 dependencies:
-  - role: sansible.java
+  - role: nflcumd.java
     version: v1.0
     java:
       version: "{{ logstash.java.version }}"
     tags:
       - build
 
-#  - role: sansible.users_and_groups
+#  - role: nflcumd.users_and_groups
 #    version: v1.0
 #    users_and_groups:
 #      groups:
